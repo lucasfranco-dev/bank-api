@@ -1,5 +1,6 @@
 package com.luczin.bankapi.models;
 
+import com.luczin.bankapi.dtos.CreateUserDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,5 +34,16 @@ public class User {
 
     private BigDecimal balance;
 
+    private UserType userType;
+
     private Boolean active;
+
+    public User(CreateUserDTO createUserDTO){
+        this.firstName = createUserDTO.firstName();
+        this.lastName = createUserDTO.lastName();
+        this.cpf = createUserDTO.cpf();
+        this.email = createUserDTO.email();
+        this.password = createUserDTO.password();
+        this.userType = createUserDTO.userType();
+    }
 }

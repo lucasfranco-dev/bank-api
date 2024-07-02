@@ -46,5 +46,7 @@ public class User {
         this.email = createUserDTO.email();
         this.password = createUserDTO.password();
         this.userType = createUserDTO.userType();
+        this.balance = BigDecimal.valueOf(1000);
+        this.active = true;
     }
 }

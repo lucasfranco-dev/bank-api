@@ -19,10 +19,10 @@ import java.time.LocalDateTime;
 public class TransactionService {
 
     @Autowired
-    TransactionsRepository transactionsRepository;
+    private TransactionsRepository transactionsRepository;
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @Transactional
     public void createTransaction(TransactionDTO data){

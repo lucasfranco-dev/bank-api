@@ -34,6 +34,7 @@ public class User {
 
     private BigDecimal balance;
 
+    @Enumerated
     private UserType userType;
 
     private Boolean active;

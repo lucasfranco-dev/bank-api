@@ -21,7 +21,7 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> findActiveUsers(){
-        return userRepository.findAllActiveUser();
+        return userRepository.findAllByActiveTrue();
     }
 
     @Transactional

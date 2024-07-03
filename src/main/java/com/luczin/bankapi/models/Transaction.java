@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 @Entity(name = Transaction.TABLE_NAME)
 @Table(name = Transaction.TABLE_NAME)
 @AllArgsConstructor
-@NoArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode(of = "id")
@@ -32,17 +31,12 @@ public class Transaction {
 
     private BigDecimal amount;
 
-    private LocalDateTime timeStamp;
+    private final LocalDateTime timeStamp;
 
     private Boolean refunded;
 
-    public Transaction(TransactionDTO transactionDTO){
-        this.sender = transactionDTO.sender();
-        this.receiver = transactionDTO.receiver();
-        this.amount = transactionDTO.amount();
+    public Transaction(){
         this.refunded = false;
         this.timeStamp = LocalDateTime.now();
     }
-
-
 }

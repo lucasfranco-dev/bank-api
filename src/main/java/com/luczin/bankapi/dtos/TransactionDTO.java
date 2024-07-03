@@ -4,5 +4,5 @@ import com.luczin.bankapi.models.User;
 
 import java.math.BigDecimal;
 
-public record TransactionDTO(User sender, User receiver, BigDecimal amount) {
+public record TransactionDTO(Long senderId, Long receiverId, BigDecimal amount) {
 }

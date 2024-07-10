@@ -1,9 +1,9 @@
 package com.luczin.bankapi.services;
 
-import com.luczin.bankapi.Exceptions.AlreadyDisabledException;
-import com.luczin.bankapi.Exceptions.CpfLengthException;
-import com.luczin.bankapi.Exceptions.DuplicateUserException;
-import com.luczin.bankapi.Exceptions.NullRequiredFieldsException;
+import com.luczin.bankapi.exceptions.AlreadyDisabledException;
+import com.luczin.bankapi.exceptions.CpfLengthException;
+import com.luczin.bankapi.exceptions.DuplicateUserException;
+import com.luczin.bankapi.exceptions.NullRequiredFieldsException;
 import com.luczin.bankapi.dtos.CreateUserDTO;
 import com.luczin.bankapi.dtos.UpdateUserDTO;
 import com.luczin.bankapi.infra.Utils;

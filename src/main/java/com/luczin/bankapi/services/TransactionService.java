@@ -1,6 +1,6 @@
 package com.luczin.bankapi.services;
 
-import com.luczin.bankapi.Exceptions.*;
+import com.luczin.bankapi.exceptions.*;
 import com.luczin.bankapi.dtos.TransactionDTO;
 import com.luczin.bankapi.infra.Utils;
 import com.luczin.bankapi.models.Transaction;

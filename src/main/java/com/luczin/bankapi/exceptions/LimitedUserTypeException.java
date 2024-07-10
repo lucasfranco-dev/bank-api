@@ -1,4 +1,4 @@
-package com.luczin.bankapi.Exceptions;
+package com.luczin.bankapi.exceptions;
 
 public class LimitedUserTypeException extends RuntimeException{
 

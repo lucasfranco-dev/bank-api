@@ -1,6 +1,6 @@
 package com.luczin.bankapi.infra;
 
-import com.luczin.bankapi.Exceptions.*;
+import com.luczin.bankapi.exceptions.*;
 import com.luczin.bankapi.dtos.ExceptionHandlerDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

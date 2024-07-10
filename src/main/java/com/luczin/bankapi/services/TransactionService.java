@@ -25,7 +25,7 @@ public class TransactionService {
     private TransactionsRepository transactionsRepository;
 
     @Autowired
-    private RestTemplate restTemplate;
+    private AuthorizationService authService;
 
     @Autowired
     UserService userService;
@@ -59,7 +59,7 @@ public class TransactionService {
 
     @Transactional
     public void reverseTransction(String id){
-        systemCheck();
+        authService.systemCheck();
 
         Transaction transaction = transactionsRepository.getReferenceById(id);
         User sender = transaction.getSender();
@@ -105,18 +105,6 @@ public class TransactionService {
         }
 
         //verificação de serviço autorizador
-        systemCheck();
-    }
-
-    private Boolean systemCheck(){
-        String url = "https://util.devi.tools/api/v2/authorize";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        String responseBody = response.getBody();
-
-        if (responseBody.equals(null) || responseBody.contains("\"authorization\" : false")){
-            throw new SystemOffException("The system mock is down!");
-        }
-
-        return true;
+        authService.systemCheck();
     }
 }
